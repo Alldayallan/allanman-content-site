@@ -10,16 +10,21 @@
 </head>
 <body>
    <div class="container">
-    <h1 class="text-center mt-3 mb-2">AllanMan Careers</h1>
+    <h1 class="text-center mt-3 mb-2">{{company_name}} Careers</h1>
    </div>  
       <img class="w-auto h-auto" id="banner" src="https://allanman-content-site.aldev408.repl.co/static/banner.jpg">
    <div class="container">
     <h2 class="text-center mt-4">About AllanMan</h2>
-      <p class="lead">Bacon ipsum dolor amet porchetta jerky quis corned beef. Labore ut minim frankfurter chislic tempor. Laboris ut non laborum voluptate culpa mollit jowl in meatloaf do andouille pork belly. Venison ullamco magna pork belly meatloaf eu reprehenderit sunt drumstick cupim labore jowl commodo excepteur tri-tip. Commodo meatball deserunt chuck burgdoggen. Biltong ipsum meatloaf ut anim id duis.</p>
+      <p style="font-weight: 400;" class="lead">Bacon ipsum dolor amet porchetta jerky quis corned beef. Labore ut minim frankfurter chislic tempor. Laboris ut non laborum voluptate culpa mollit jowl in meatloaf do andouille pork belly. Venison ullamco magna pork belly meatloaf eu reprehenderit sunt drumstick cupim labore jowl commodo excepteur tri-tip. Commodo meatball deserunt chuck burgdoggen. Biltong ipsum meatloaf ut anim id duis.</p>
     <h2 class="text-center">Open Positions</h2>
-    <p class="text-center mt-2">TODO - show the jobs here</p>
+    <div>
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
      <div class="d-grid gap-2 col-1 mx-auto">
-      <button class="btn btn-info" type="button">Contact Us</button>
+      <button class="btn btn-primary" type="button">Contact Us</button>
+       <p class='Copyright 2023, AllanMan'></p>
      </div>
     </div>
 </body>
